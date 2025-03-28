@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="50" rx="8" fill="#F3F4F6"/>
+  
+  <!-- Safe Icon -->
+  <path d="M30 15H45C46.1046 15 47 15.8954 47 17V33C47 34.1046 46.1046 35 45 35H30C28.8954 35 28 34.1046 28 33V17C28 15.8954 28.8954 15 30 15Z" stroke="#4B5563" stroke-width="2"/>
+  <path d="M37.5 23V27" stroke="#4B5563" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="37.5" cy="27" r="2" fill="#4B5563"/>
+  
+  <!-- Text -->
+  <text x="60" y="30" font-family="Arial" font-size="16" font-weight="bold" fill="#374151">
+    SAFE Note
+  </text>
+  <text x="135" y="30" font-family="Arial" font-size="16" fill="#6B7280">
+    Negotiator
+  </text>
+</svg> 

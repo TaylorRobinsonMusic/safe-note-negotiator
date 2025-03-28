@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Icon -->
+  <g transform="translate(25, 10)">
+    <!-- Document Shape -->
+    <path d="M0 4C0 1.79086 1.79086 0 4 0H16L24 8V26C24 28.2091 22.2091 30 20 30H4C1.79086 30 0 28.2091 0 26V4Z" fill="#2563EB"/>
+    <!-- Folded Corner -->
+    <path d="M16 0L24 8H20C17.7909 8 16 6.20914 16 4V0Z" fill="#1D4ED8"/>
+    <!-- Lock Shape -->
+    <rect x="6" y="14" width="12" height="10" rx="2" fill="#FFFFFF"/>
+    <rect x="8" y="12" width="8" height="4" rx="1" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(58, 32)">
+    <text font-family="Inter, -apple-system, system-ui, sans-serif" font-size="18" font-weight="700" fill="#1F2937">
+      <tspan>SAFE</tspan>
+      <tspan dx="4" font-weight="500" fill="#4B5563">Note</tspan>
+    </text>
+  </g>
+  <text x="58" y="42" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="10" font-weight="500" fill="#6B7280">NEGOTIATOR</text>
+</svg> 
