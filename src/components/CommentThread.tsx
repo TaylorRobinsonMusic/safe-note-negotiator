@@ -42,7 +42,7 @@ const CommentThread: React.FC<Props> = ({
   };
 
   const renderComment = (comment: Comment, depth: number = 0) => {
-    const author = users.find(u => u.userId === comment.userId);
+    const author = users.find(u => u.id === comment.userId);
     const replies = commentsByParentId[comment.id] || [];
     const hasReplies = replies.length > 0;
 
