@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PDFDocument } from 'pdf-lib';
+import pdfParse from 'pdf-parse';
 
 export async function POST(req: NextRequest) {
   try {
@@ -15,9 +15,8 @@ export async function POST(req: NextRequest) {
 
     // Read the PDF file
     const pdfBuffer = await pdfFile.arrayBuffer();
-    const pdfDoc = await PDFDocument.load(pdfBuffer);
-    const pages = pdfDoc.getPages();
-    const text = await extractText(pages[0]); // We'll focus on the first page for now
+    const data = await pdfParse(Buffer.from(pdfBuffer));
+    const text = data.text;
 
     // Extract terms from the text
     const terms = parseTerms(text);
@@ -30,12 +29,6 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
-}
-
-async function extractText(page: any) {
-  // This is a simplified version. In a real implementation,
-  // you would use a more robust PDF text extraction library
-  return page.getText();
 }
 
 function parseTerms(text: string) {
