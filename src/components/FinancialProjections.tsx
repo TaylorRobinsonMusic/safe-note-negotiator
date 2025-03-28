@@ -203,7 +203,12 @@ const FinancialProjections: React.FC<Props> = ({ terms, onScenarioChange }) => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="round" />
             <YAxis tickFormatter={value => `${Math.round(value * 100)}%`} />
-            <Tooltip formatter={value => `${value.toFixed(1)}%`} />
+            <Tooltip 
+              formatter={(value: number | string | Array<number | string>) => {
+                const numValue = typeof value === 'number' ? value : parseFloat(String(value));
+                return isNaN(numValue) ? '0%' : `${numValue.toFixed(1)}%`;
+              }} 
+            />
             <Legend />
             <Area
               type="monotone"
