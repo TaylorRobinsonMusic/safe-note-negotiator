@@ -1,18 +1,18 @@
-declare module 'pdf-parse' {
+declare module 'pdf-parse/lib/pdf-parse.js' {
   interface PDFData {
     text: string;
     numpages: number;
     numrender: number;
-    info: {
-      PDFFormatVersion: string;
-      IsAcroFormPresent: boolean;
-      IsXFAPresent: boolean;
-      [key: string]: any;
-    };
+    info: any;
     metadata: any;
     version: string;
   }
 
-  function PDFParse(dataBuffer: Buffer | ArrayBuffer): Promise<PDFData>;
-  export default PDFParse;
+  interface PDFOptions {
+    max?: number;
+    version?: string;
+  }
+
+  function pdfParse(dataBuffer: Buffer, options?: PDFOptions): Promise<PDFData>;
+  export default pdfParse;
 } 

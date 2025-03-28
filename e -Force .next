@@ -1,0 +1,4 @@
+[33m5cc7513[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m fix: type error in FinancialProjections tooltip formatter
+[33ma2422de[m Fix User type error in CommentThread component
+[33m366f420[m Fix PDF parsing implementation and prepare for deployment
+[33m2e9fe0a[m Initial commit - SAFE Note Negotiator

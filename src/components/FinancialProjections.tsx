@@ -204,10 +204,16 @@ const FinancialProjections: React.FC<Props> = ({ terms, onScenarioChange }) => {
             <XAxis dataKey="round" />
             <YAxis tickFormatter={value => `${Math.round(value * 100)}%`} />
             <Tooltip 
-              formatter={(value: number | string | Array<number | string>) => {
-                const numValue = typeof value === 'number' ? value : parseFloat(String(value));
-                return isNaN(numValue) ? '0%' : `${numValue.toFixed(1)}%`;
-              }} 
+              formatter={(value: any) => {
+                if (typeof value === 'number') {
+                  return `${(value * 100).toFixed(1)}%`;
+                }
+                const num = Number(value);
+                if (!isNaN(num)) {
+                  return `${(num * 100).toFixed(1)}%`;
+                }
+                return '0%';
+              }}
             />
             <Legend />
             <Area
